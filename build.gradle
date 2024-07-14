@@ -4,7 +4,7 @@ plugins {
     id "net.serenity-bdd.serenity-gradle-plugin" version "4.1.14"
 }
 
-group = 'co.dlacademy'
+group = 'co.ingDanielZabala'
 version = '1.0-SNAPSHOT'
 
 repositories {

@@ -1,4 +1,4 @@
-package co.dlacademy.pages;
+package co.ingDanielZabala.pages;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;

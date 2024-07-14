@@ -1,4 +1,4 @@
-package co.dlacademy.pages;
+package co.ingDanielZabala.pages;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;

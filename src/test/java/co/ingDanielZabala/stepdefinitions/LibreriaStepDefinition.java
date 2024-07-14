@@ -1,6 +1,6 @@
-package co.dlacademy.stepdefinitions;
+package co.ingDanielZabala.stepdefinitions;
 
-import co.dlacademy.pages.InicioPage;
+import co.ingDanielZabala.pages.InicioPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

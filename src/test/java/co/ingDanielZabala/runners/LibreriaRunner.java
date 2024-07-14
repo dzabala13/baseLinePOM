@@ -1,4 +1,4 @@
-package co.dlacademy.runners;
+package co.ingDanielZabala.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberSerenityRunner;
