@@ -1,10 +1,10 @@
 package co.ingDanielZabala.stepdefinitions;
 
 import co.ingDanielZabala.pages.ConfirmationPage;
-import co.ingDanielZabala.pages.GuestPage;
+import co.ingDanielZabala.pages.DetallesFiestaPage;
 import co.ingDanielZabala.pages.HostPartyPage;
 import co.ingDanielZabala.pages.InicioPage;
-import co.ingDanielZabala.steps.DetallesFiestaStep;
+import co.ingDanielZabala.steps.TipoFiestaStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,22 +14,23 @@ import org.fluentlenium.core.annotation.Page;
 public class LibreriaStepDefinition {
 
     @Steps
-    DetallesFiestaStep detallesFiestaStep;
+    TipoFiestaStep tipoFiestaStep;
 
     @Page
     InicioPage inicioPage;
 
     @Page
-    HostPartyPage  hostPartyPage;
+    HostPartyPage hostPartyPage;
 
     @Page
-    GuestPage   guestPage;
+    DetallesFiestaPage detallesFiestaPage;
+
     @Page
     ConfirmationPage confirmationPage;
 
 
     @Given("el usuario esta en la pagina")
-    public void elUsuarioEstaEnLaPagina()  {
+    public void elUsuarioEstaEnLaPagina() {
         inicioPage.open();
     }
 
@@ -38,26 +39,23 @@ public class LibreriaStepDefinition {
         inicioPage.manejoAnuncio();
         inicioPage.seleccionOpcionMenu();
     }
+
     @When("el usuario indica que sera {word} y que la tematica de la fiesta sera {word}")
-    public void elUsuarioIndicaQueSeraHosterYQueLaTematicaDeLaFiestaSeraZombie(String rol, String tematicaFiesta) throws InterruptedException {
+    public void elUsuarioIndicaQueSeraHosterYQueLaTematicaDeLaFiestaSeraZombie(String rol, String tematicaFiesta) {
 
-        detallesFiestaStep.detallesFiestaSegunRol(rol,tematicaFiesta);
-
-        //hostPartyPage.seleccionarRol();
-        //hostPartyPage.seleccionarTipoFiesta(tematicaFiesta);
+        tipoFiestaStep.detallesFiestaSegunRol(rol, tematicaFiesta);
     }
 
     @When("el ususario indica la cantidad de invitados {int} e ingresa su {word}")
     public void elUsusarioIndicaLaCantidadDeInvitadosEIngresaSuCorreoElectronico(int invitados, String correoElectronico) {
-        guestPage.seleccionarNumeroInvitados(invitados);
-        guestPage.ingresarEmail(correoElectronico);
+        detallesFiestaPage.seleccionarNumeroInvitados(invitados);
+        detallesFiestaPage.ingresarEmail(correoElectronico);
     }
 
     @Then("el usuario valida que la fiesta se haya sido programada correctamente")
     public void elUsuarioValidaQueLaFiestaSeHayaSidoProgramadaCorrectamente() {
         confirmationPage.validacionDeFiesta();
     }
-
 
 
 }

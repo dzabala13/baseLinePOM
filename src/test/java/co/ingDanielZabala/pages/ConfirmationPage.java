@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.is;
 
 public class ConfirmationPage extends BasePage{
 
-    @FindBy(xpath="//h1[@data-aid=\"COUNTDOWN_RUNNING_HEADLINE_RENDERED\"]")
+    @FindBy(xpath="//h1[@data-aid='COUNTDOWN_RUNNING_HEADLINE_RENDERED']")
     WebElementFacade tituloConfirmacionFiesta;
 
     public void validacionDeFiesta() {

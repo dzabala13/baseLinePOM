@@ -5,7 +5,7 @@ import co.ingDanielZabala.pages.HostPartyPage;
 import net.serenitybdd.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 
-public class DetallesFiestaStep {
+public class TipoFiestaStep {
 
     @Page
     HostPartyPage hostPartyPage;
