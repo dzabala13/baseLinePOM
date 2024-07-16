@@ -4,36 +4,19 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
 public class InicioPage extends BasePage {
-    String paginaInicial = getDriver().getWindowHandle();
 
-    @FindBy(xpath = "//a[@href='#sidebar']")
-    WebElementFacade menuHamburguesa;
+    @FindBy(xpath = "//*[@id='popup-widget238491-close-icon']")
+    WebElementFacade anuncio;
 
-    @FindBy(xpath = "//iframe[@src='index.html']")
-    WebElementFacade iframe;
+    @FindBy(xpath = "//*[@data-aid='HEADER_NAV_RENDERED']//child::a[@href='/halloween-party' and @data-ux='NavLink']")
+    WebElementFacade opcionMenuParty;
 
-    @FindBy(xpath = "//input[@value='Open Tab']")
-    WebElementFacade buttonOpenTab;
 
-    @FindBy(xpath = "//button[@onclick='alertTrigger()']")
-    WebElementFacade buttonTriggerAlert;
-
-    public void abrirMenuHamburguesa(){
-        cambiarIframe(iframe);
-        menuHamburguesa.click();
-        regresarDelFrame();
+    public void manejoAnuncio() {
+    if (anuncio.isVisible()){ anuncio.click();}
     }
 
-    public void abrirNuevaPestana(){
-        buttonOpenTab.click();
-    }
-
-    public void abrirAlerta(){
-        buttonTriggerAlert.click();
-    }
-
-    public void abrirMenuLateral(){
-        regresarPaginaInicial(paginaInicial);
-        menuHamburguesa.click();
+    public void seleccionOpcionMenu() {
+        opcionMenuParty.click();
     }
 }
