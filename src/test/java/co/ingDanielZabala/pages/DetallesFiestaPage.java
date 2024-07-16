@@ -3,15 +3,13 @@ package co.ingDanielZabala.pages;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
-public class DetallesFiestaPage extends BasePage{
+public class DetallesFiestaPage extends BasePage {
 
 
-
-
-    @FindBy(xpath="//iframe[starts-with(@id,'iframe')]")
+    @FindBy(xpath = "//iframe[starts-with(@id,'iframe')]")
     WebElementFacade iframe;
 
-    @FindBy(xpath="//select[@name='guests']")
+    @FindBy(xpath = "//select[@name='guests']")
     WebElementFacade selectCantidadInvitados;
 
     @FindBy(xpath = "//input[starts-with(@id,'input')]")

@@ -8,9 +8,9 @@ Feature: Implementar libreria de acciones para Serenity
     Then el usuario valida que la fiesta se haya sido programada correctamente
     Examples:
       | tipoDeRol | type       | numeroDeInvitados | correo_electronico |
-      | HOSTING   | Ghosts     | 1                 | example@gmail.com  |
-      | HOSTING   | Zombies    | 1                 | example@gmail.com  |
-      | ATTENDING | Ghostville | 2                 | 2example@gmail.com |
-      | ATTENDING | Zombieton  | 0                 | 3example@gmail.com |
+      | Hosting   | Ghosts     | 1                 | example@gmail.com  |
+      | Hosting   | Zombies    | 1                 | example@gmail.com  |
+      | Attending | Ghostville | 2                 | 2example@gmail.com |
+      | Attending | Zombieton  | 0                 | 3example@gmail.com |
 
 

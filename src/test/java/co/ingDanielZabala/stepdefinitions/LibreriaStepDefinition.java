@@ -32,11 +32,12 @@ public class LibreriaStepDefinition {
     @Given("el usuario esta en la pagina")
     public void elUsuarioEstaEnLaPagina() {
         inicioPage.open();
+        inicioPage.manejoAnuncio();
     }
 
     @Given("el usurio va a la seccion de Halloween Party")
     public void elUsurioVaALaSeccionDeHalloweenParty() {
-        inicioPage.manejoAnuncio();
+
         inicioPage.seleccionOpcionMenu();
     }
 

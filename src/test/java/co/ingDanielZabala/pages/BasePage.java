@@ -2,6 +2,9 @@ package co.ingDanielZabala.pages;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
+import org.openqa.selenium.By;
+
+import static co.ingDanielZabala.utils.Constantes.COMODIN;
 
 public class BasePage extends PageObject {
 
@@ -37,6 +40,11 @@ public class BasePage extends PageObject {
 
     public void obtenerInfoAlert(){
         getDriver().switchTo().alert().getText();
+    }
+
+    public WebElementFacade setParametro(String xpath, String parametro){
+        String nuevoXpath = xpath.replace(COMODIN, parametro);
+        return find(By.xpath(nuevoXpath));
     }
 
 
