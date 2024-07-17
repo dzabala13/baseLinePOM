@@ -16,7 +16,7 @@ public class TipoFiestaStep {
     HalloweenPartyPage halloweenPartyPage;
 
     @Step
-    public void detallesFiestaSegunRol(String rol, String tematicaFiesta) {
+    public void detallesFiestaSegunRol(String rol, String tematicaFiesta) throws Exception {
 
         halloweenPartyPage.seleccionarRol(rol);
 

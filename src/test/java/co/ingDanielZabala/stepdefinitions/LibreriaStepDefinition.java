@@ -42,7 +42,7 @@ public class LibreriaStepDefinition {
     }
 
     @When("el usuario indica que sera {word} y que la tematica de la fiesta sera {word}")
-    public void elUsuarioIndicaQueSeraHosterYQueLaTematicaDeLaFiestaSeraZombie(String rol, String tematicaFiesta) {
+    public void elUsuarioIndicaQueSeraHosterYQueLaTematicaDeLaFiestaSeraZombie(String rol, String tematicaFiesta) throws Exception {
 
         tipoFiestaStep.detallesFiestaSegunRol(rol, tematicaFiesta);
     }

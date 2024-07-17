@@ -12,5 +12,7 @@ Feature: Implementar libreria de acciones para Serenity
       | Hosting   | Zombies    | 1                 | example@gmail.com  |
       | Attending | Ghostville | 2                 | 2example@gmail.com |
       | Attending | Zombieton  | 0                 | 3example@gmail.com |
+      #| Attending | Scared     | 0                 | 3example@gmail.com |
+
 
 
